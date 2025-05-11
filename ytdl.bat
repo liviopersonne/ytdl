@@ -1,1 +1,1 @@
-python -u "c:\Users\livio\Desktop\programmation\fichiers\ytdl\ytdl.py"
+python -u "ytdl.py"
