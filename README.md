@@ -20,10 +20,18 @@ Create a ```env``` folder at the root of your directory containing 2 files:
 
 - ```vars.py``` which you can complete using ```_vars_model.py```
 
-### Icon (optionnal)
+### Execution rights
 
-I usually set the icon of my ```.bat``` files as the icons provided here
+Add execution rights with ```chmod +x ytdl.sh update_playlist.sh```
+
+### Menu creation (optionnal)
+
+If you're on kde plasma like me, you can enter the menu editor and setup ```ytdl``` and ```update_music```
+
+Be sure to add the base directory and the option ```execute in a terminal```
+
+You can also add an icon if you want !
 
 ## Usage
 
-Double click on one of the two bat files and follow the instructions on the terminal !
+Execute the sh file or search for them like a normal application if you set up the menu !
