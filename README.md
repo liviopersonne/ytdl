@@ -1,5 +1,7 @@
 # YTDL
 
+Check out the Windows branch if you're on Windows !
+
 This is a small program that I made for personnal use, with it you can download a video or audio from youtube.
 You can also download entire playlists in a single command.
 There is also a function called "update playlist", which keeps track of the last video you downloaded, and downloads all of the remaining ones. I use it to keep track of my music platlist on youtube.
@@ -8,7 +10,7 @@ There is also a function called "update playlist", which keeps track of the last
 
 ### Dependencies
 
-Make sure you have python with yt_dlp in your PATH environment
+Make sure you have python with yt_dlp in your PATH environment or in a virtual environment (depending on the case you may want to remove the 1st line of both sh files)
 
 ### Env
 
