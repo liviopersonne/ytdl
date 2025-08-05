@@ -51,6 +51,7 @@ def playlist_items(start: str, end: str, reverse: bool):
 
 
 def search_id_in_playlist(playlist_url, target_id):
+    clean_target_id = target_id.strip()
     scraper_options = {
         "verbose": False,
         "quiet": True,
@@ -62,7 +63,7 @@ def search_id_in_playlist(playlist_url, target_id):
         playlist_entries = playlist_info.get("entries", [])
         first_id = playlist_entries[0].get("id")
         for i, vid in enumerate(playlist_entries):
-            if vid.get("id") == target_id:
+            if vid.get("id") == clean_target_id:
                 if i == 0:
                     input("Already up to date !")
                     raise Exception("Already up to date !")
@@ -91,7 +92,15 @@ def clean_timestamp(timestamp: str):
 
 
 def download(
-    playlist, url, audio_only, start, end, reverse, chapter, start_time, end_time
+    playlist,
+    url,
+    audio_only,
+    start,
+    end,
+    reverse,
+    chapter="",
+    start_time="",
+    end_time="",
 ):
     if len(os.listdir(TEMP_PATH)) > 0:
         resume = (
