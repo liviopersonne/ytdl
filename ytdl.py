@@ -119,7 +119,7 @@ def download(
     else:
         if chapter:
             options["download_ranges"] = yt_dlp.utils.download_range_func([chapter], [])
-        else:
+        elif start_time and end_time:
             options["download_ranges"] = yt_dlp.utils.download_range_func(
                 [], [[clean_timestamp(start_time), clean_timestamp(end_time)]]
             )
