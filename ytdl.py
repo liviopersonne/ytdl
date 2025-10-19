@@ -56,7 +56,6 @@ def search_id_in_playlist(playlist_url, target_id):
         "verbose": False,
         "quiet": True,
         "extract_flat": True,
-        "playlistend": 100,
     }
     with yt_dlp.YoutubeDL(scraper_options) as playlist_scraper:
         playlist_info = playlist_scraper.extract_info(playlist_url, download=False)
@@ -65,10 +64,8 @@ def search_id_in_playlist(playlist_url, target_id):
         for i, vid in enumerate(playlist_entries):
             if vid.get("id") == clean_target_id:
                 if i == 0:
-                    input("Already up to date !")
                     raise Exception("Already up to date !")
                 return str(first_id), str(i)
-    input("Target id not found in playlist")
     raise Exception("Target id not found in playlist")
 
 
