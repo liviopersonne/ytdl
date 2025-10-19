@@ -22,7 +22,7 @@ There is a `env` folder at the root of your directory containing 2 files:
 
 ### Execution rights
 
-Add execution rights with `chmod +x ytdl.sh update_playlist.sh`
+Add execution rights with `make exe_rights`
 
 ### Menu creation (optionnal)
 
