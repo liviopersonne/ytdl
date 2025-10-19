@@ -66,7 +66,7 @@ def search_id_in_playlist(playlist_url, target_id):
                 if i == 0:
                     raise Exception("Already up to date !")
                 return str(first_id), str(i)
-    raise Exception("Target id not found in playlist")
+    raise Exception(f"Target id not found in playlist after scanning {i} videos")
 
 
 def match_url(url: str):
