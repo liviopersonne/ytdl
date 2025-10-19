@@ -1,7 +1,7 @@
 import yt_dlp
 import os
 import sys
-from env.vars import DEST_PATH, MY_URLS
+from env.vars import DEST_PATH, MY_URLS, MUSIC_URL
 
 TEMP_PATH = os.path.join(os.getcwd(), "temp")
 LAST_ID_PATH = os.path.join(os.getcwd(), "env", "last_id.txt")
@@ -160,8 +160,8 @@ def download_in_terminal():
 def update_music():
     with open(LAST_ID_PATH, "r") as infile:
         last_downloaded_id = infile.read()
-    new_ldi, end = search_id_in_playlist(MY_URLS["music"], last_downloaded_id)
-    download(True, MY_URLS["music"], True, "", end, True)
+    new_ldi, end = search_id_in_playlist(MUSIC_URL, last_downloaded_id)
+    download(True, MUSIC_URL, True, "", end, True)
     with open(LAST_ID_PATH, "w") as outfile:
         outfile.write(new_ldi)
 
