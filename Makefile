@@ -4,7 +4,7 @@ temp:
 	mkdir temp
 
 venv:
-	python -m venv venv && source venv/bin/activate && pip install yt_dlp
+	python -m venv venv && source venv/bin/activate && python3 -m pip install -U yt-dlp
 
 ytdl: venv temp
 	sh scripts/ytdl.sh
