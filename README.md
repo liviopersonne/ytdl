@@ -28,7 +28,7 @@ Add execution rights with `make exe_rights`
 
 If you're on kde plasma like me, you can enter the menu editor and setup `ytdl` and `update_music`
 
-Be sure to add the base directory and the option `execute in a terminal`
+Be sure to add the base directory and the option `Run in terminal`, and add the correct `Work path`
 
 You can also add an icon if you want !
 
